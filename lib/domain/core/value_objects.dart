@@ -40,7 +40,7 @@ abstract class ValueObject<T> {
   String toString() => 'Value($value)';
 }
 
-class UniqueId extends ValueObject {
+class UniqueId extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
 
