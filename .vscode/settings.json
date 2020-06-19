@@ -1,3 +1,15 @@
 {
-    "search.baseUrl": "https://pub.dev/"
+    "search.baseUrl": "https://pub.dev/",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "lib/domain/notes/note_failure.freezed.dart": false,
+        "**/note_failure.freezed.dart": false,
+        "lib/domain/notes/todo_item.freezed.dart": false,
+        "**/todo_item.freezed.dart": false
+    },
+    "explorerExclude.backup": null
 }
