@@ -20,7 +20,7 @@ class NoteActorBloc extends Bloc<NoteActorEvent, NoteActorState> {
   NoteActorBloc(this._noteRepository);
 
   @override
-  NoteActorState get initialState => NoteActorState.initial();
+  NoteActorState get initialState => const NoteActorState.initial();
 
   @override
   Stream<NoteActorState> mapEventToState(
