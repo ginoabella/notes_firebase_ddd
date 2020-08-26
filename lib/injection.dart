@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:notes_firebase/injection.iconfig.dart';
+import 'package:notes_firebase/injection.config.dart';
 
 final GetIt getIt = GetIt.instance;
 

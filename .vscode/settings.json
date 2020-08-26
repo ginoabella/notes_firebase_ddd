@@ -6,10 +6,8 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "lib/domain/notes/note_failure.freezed.dart": false,
-        "**/note_failure.freezed.dart": false,
-        "lib/domain/notes/todo_item.freezed.dart": false,
-        "**/todo_item.freezed.dart": false
+        "**/*.freezed.dart": true,
+        "**/*.g.dart": true
     },
-    "explorerExclude.backup": null
+    "explorerExclude.backup": {}
 }

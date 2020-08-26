@@ -12,6 +12,8 @@ class NoteBody extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
   static const maxLength = 1000;
 
+  const NoteBody._(this.value);
+
   factory NoteBody(String input) {
     assert(input != null);
     return NoteBody._(
@@ -19,7 +21,6 @@ class NoteBody extends ValueObject<String> {
           .flatMap(validdateStringNotEmpty),
     );
   }
-  const NoteBody._(this.value);
 }
 
 class TodoName extends ValueObject<String> {

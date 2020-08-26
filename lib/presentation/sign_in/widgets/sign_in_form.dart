@@ -1,7 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_firebase/application/auth/auth_bloc.dart';
 import 'package:notes_firebase/application/auth/sign_in_form/sign_in_form_bloc.dart';
+import 'package:notes_firebase/presentation/routes/router.gr.dart';
 
 class SignInForm extends StatelessWidget {
   @override
@@ -23,7 +26,12 @@ class SignInForm extends StatelessWidget {
               ).show(context);
             },
             (_) {
-              // TODO: Navigate
+              ExtendedNavigator.of(context).pushNotesOverviewPage();
+              // ExtendedNavigator.of(context)
+              //     .pushReplacementNamed(Routes.notesOverviewPage);
+              context
+                  .bloc<AuthBloc>()
+                  .add(const AuthEvent.authCheckRequested());
             },
           ),
         );
@@ -41,7 +49,7 @@ class SignInForm extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
                   labelText: 'Email',
                 ),
@@ -64,7 +72,7 @@ class SignInForm extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.lock),
                   labelText: 'Password',
                 ),
